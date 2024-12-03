@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'font-h1';
+  src: url('/assets/fonts/SecularOne-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'font-h2';
+  src: url('/assets/fonts/Lora-Regular.ttf')
+}
+
+@font-face {
+  font-family: 'font-p';
+  src: url('/assets/fonts/RobotoCondensed-Thin.ttf')
+}

@@ -1,0 +1,259 @@
+@import url("fonts.css");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  /* background: linear-gradient(
+    90deg,
+    rgba(27, 34, 72, 1) 0%,
+    rgba(26, 11, 35, 1) 100%
+  ); */
+}
+
+/*Styling of background*/
+
+.stars {
+  background: #000 url('/assets/stars.png');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  position: fixed;
+}
+
+.twinkling {
+  z-index: -1;
+  background: url('/assets/twinkle.png') repeat;
+  position: fixed;
+  background-size: 10rem;
+  background-repeat: repeat;
+  width: 100vw;
+  aspect-ratio: 1/1;
+  animation: move-twink-back 300s linear infinite;
+}
+
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+
+/*Placement*/
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Solen {
+  margin-left: -73rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(255, 208, 42);
+}
+
+.Merkurius {
+  width: 0.6rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(140, 143, 130);
+}
+
+.Venus {
+  width: 1.49rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(234, 204, 195);
+}
+
+.Jorden {
+  width: 1.56rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(62, 145, 216);
+}
+
+.Mars {
+  width: 0.84rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(214, 86, 105);
+}
+
+.Jupiter {
+  width: 17.61rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(226, 147, 104);
+}
+
+.Saturnus {
+  width: 15rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(198, 170, 114);
+  position: relative;
+}
+
+.Saturnus:after {
+  content: "";
+  height: 3px;
+  width: 150%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  transform: rotate(-30deg);
+  background: linear-gradient(
+    to right /* Gradient direction*/,
+    transparent 0% /*Fully transparent at the start*/,
+    rgba(255, 255, 255, 1) 50% /*Semi-transparent in the middle*/,
+    transparent 100% /*Fully transparent at the end*/
+  );
+  top: 50%;
+  left: -23%;
+  opacity: 80%;
+}
+
+.Uranus {
+  width: 6.24rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(201, 212, 240);
+}
+
+.Neptunus {
+  width: 6.07rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(124, 145, 166);
+}
+
+
+
+/**********************************************/
+
+h1 {
+  font-family: "font-h1";
+  font-weight: 400;
+  font-size: 3.75rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "font-h2";
+  font-weight: 400;
+  font-size: 1.5rem;
+  letter-spacing: 1rem;
+  color: #ffd029;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: "font-p";
+  font-weight: 100;
+  font-size: 1.125rem;
+}
+
+.planet-container {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  gap: 20rem;
+}
+
+.current-planet-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  gap: 20rem
+}
+
+.planet {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(141, 140, 125);
+  box-shadow: 3rem 0 0 0 rgb(141, 140, 125, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(141, 140, 125, 0.1) /*Second shadow*/,
+    20rem 0 60px 0px rgb(141, 140, 125, 0.1) /*Third shadow*/;
+}
+
+.planet-info {
+  /* border: 2px solid red; */
+  width: 50rem;
+  height: 35rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.planet-main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.planet-details {
+  /* border: 2px solid rebeccapurple; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+  margin: 2rem 15rem 2rem 0;
+
+  .details-sizes {
+    /* border: 2px solid firebrick; */
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-weight: 400;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .details-temp {
+    /* border: 2px solid firebrick; */
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-weight: 400;
+      font-size: 1.125rem;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.moon-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  h1 {
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+}
+
+.divider-line {
+  width: 100%;
+  height: 0.5px;
+  background-color: white;
+  opacity: 50%;
+}
