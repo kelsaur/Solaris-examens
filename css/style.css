@@ -21,7 +21,7 @@ body {
 /*Styling of background*/
 
 .stars {
-  background: #000 url('/assets/stars.png');
+  background: #000 url("/assets/stars.png");
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -31,7 +31,7 @@ body {
 
 .twinkling {
   z-index: -1;
-  background: url('/assets/twinkle.png') repeat;
+  background: url("/assets/twinkle.png") repeat;
   position: fixed;
   background-size: 10rem;
   background-repeat: repeat;
@@ -41,12 +41,15 @@ body {
 }
 
 @keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
 }
 
-
-/*Placement*/
+/*Placement and planets styling*/
 .container {
   width: 100vw;
   height: 100vh;
@@ -55,7 +58,7 @@ body {
   justify-content: space-evenly;
 }
 
-.Solen {
+.solen {
   margin-left: -73rem;
   width: 75rem;
   aspect-ratio: 1/1;
@@ -63,42 +66,108 @@ body {
   background-color: rgb(255, 208, 42);
 }
 
-.Merkurius {
+.solen-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(255, 208, 42);
+  box-shadow: 3rem 0 0 0 rgb(255, 208, 42, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(255, 208, 42, 0.1) /*Second shadow*/,
+    20rem 0 10rem 0 rgb(255, 208, 42, 0.1) /*Third shadow*/;
+}
+
+.merkurius {
   width: 0.6rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(140, 143, 130);
 }
 
-.Venus {
+.merkurius-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(140, 143, 130);
+  box-shadow: 3rem 0 0 0 rgb(141, 140, 125, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(141, 140, 125, 0.1) /*Second shadow*/,
+    20rem 0 60px 0px rgb(141, 140, 125, 0.1) /*Third shadow*/;
+}
+
+.venus {
   width: 1.49rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(234, 204, 195);
 }
 
-.Jorden {
+.venus-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(234, 204, 195);
+  box-shadow: 3rem 0 0 0 rgb(234, 204, 195, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(234, 204, 195, 0.1) /*Second shadow*/,
+    20rem 0 10rem 0px rgb(234, 204, 195, 0.1) /*Third shadow*/;
+}
+
+.jorden {
   width: 1.56rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(62, 145, 216);
 }
 
-.Mars {
+.jorden-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(62, 145, 216);
+  box-shadow: 3rem 0 0 0 rgb(62, 145, 216, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(62, 145, 216, 0.1) /*Second shadow*/,
+    20rem 0 10rem 0 rgb(62, 145, 216, 0.1) /*Third shadow*/;
+}
+
+.mars {
   width: 0.84rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(214, 86, 105);
 }
 
-.Jupiter {
+.mars-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(214, 86, 105);
+  box-shadow: 3rem 0 0 0 rgb(214, 86, 105, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(214, 86, 105, 0.1) /*Second shadow*/,
+    20rem 0 60px 0px rgb(214, 86, 105, 0.1) /*Third shadow*/;
+}
+
+.jupiter {
   width: 17.61rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(226, 147, 104);
 }
 
-.Saturnus {
+.jupiter-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(226, 147, 104);
+  box-shadow: 3rem 0 0 0 rgb(226, 147, 104, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(226, 147, 104, 0.1) /*Second shadow*/,
+    20rem 0 60px 0px rgb(226, 147, 104, 0.1) /*Third shadow*/;
+}
+
+.saturnus {
   width: 15rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
@@ -106,7 +175,7 @@ body {
   position: relative;
 }
 
-.Saturnus:after {
+.saturnus:after {
   content: "";
   height: 3px;
   width: 150%;
@@ -124,23 +193,54 @@ body {
   opacity: 80%;
 }
 
-.Uranus {
+.saturnus-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(198, 170, 114);
+  box-shadow: 3rem 0 0 0 rgb(198, 170, 114, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(198, 170, 114, 0.1) /*Second shadow*/,
+    20rem 0 60px 0px rgb(198, 170, 114, 0.1) /*Third shadow*/;
+}
+
+.uranus {
   width: 6.24rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(201, 212, 240);
 }
 
-.Neptunus {
+.uranus-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(201, 212, 240);
+  box-shadow: 3rem 0 0 0 rgb(201, 212, 240, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(201, 212, 240, 0.1) /*Second shadow*/,
+    20rem 0 60px 0px rgb(201, 212, 240, 0.1) /*Third shadow*/;
+}
+
+.neptunus {
   width: 6.07rem;
   aspect-ratio: 1/1;
   border-radius: 100%;
   background-color: rgb(124, 145, 166);
 }
 
+.neptunus-clicked {
+  margin-left: -68.5rem;
+  width: 75rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background-color: rgb(124, 145, 166);
+  box-shadow: 3rem 0 0 0 rgb(124, 145, 166, 0.1) /*First shadow*/,
+    6rem 0 0 0 rgb(124, 145, 166, 0.1) /*Second shadow*/,
+    20rem 0 60px 0px rgb(124, 145, 166, 0.1) /*Third shadow*/;
+}
 
-
-/**********************************************/
+/*Font rules*/
 
 h1 {
   font-family: "font-h1";
@@ -164,6 +264,8 @@ p {
   font-size: 1.125rem;
 }
 
+/*Placement and styling of chosen planet*/
+
 .planet-container {
   width: 100vw;
   height: 100vh;
@@ -177,7 +279,7 @@ p {
   width: 100vw;
   height: 100vh;
   align-items: center;
-  gap: 20rem
+  gap: 20rem;
 }
 
 .planet {
@@ -210,7 +312,6 @@ p {
   /* border: 2px solid rebeccapurple; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 5rem;
   margin: 2rem 15rem 2rem 0;
 
@@ -230,6 +331,7 @@ p {
     /* border: 2px solid firebrick; */
     display: flex;
     justify-content: space-between;
+    margin-right: -0.7rem;
 
     h1 {
       font-weight: 400;
@@ -243,12 +345,20 @@ p {
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  flex-wrap: wrap;
+  max-width: 100%;
 
   h1 {
     font-weight: 400;
     font-size: 1.125rem;
     text-transform: uppercase;
   }
+
+  p{
+    display: inline-flex;
+    overflow-wrap: break-word;
+  }
+
 }
 
 .divider-line {
